@@ -18,7 +18,7 @@ public class BasicCrawlController {
         config.setCrawlStorageFolder("./tmp/crawler4j/");
 
         // Be polite: Make sure that we don't send more than 1 request per second (1000 milliseconds between requests).
-        // Otherwise it may overload the target servers.
+        //Otherwise, it may overload the target servers.
         config.setPolitenessDelay(1000);
 
         // You can set the maximum crawl depth here. The default value is -1 for unlimited depth.
@@ -31,7 +31,7 @@ public class BasicCrawlController {
         config.setIncludeBinaryContentInCrawling(false);
 
         // Do you need to set a proxy? If so, you can use:
-        // config.setProxyHost("proxyserver.example.com");
+        // config.setProxyHost("proxyServer.example.com");
         // config.setProxyPort(8080);
 
         // If your proxy also needs authentication:
@@ -61,7 +61,7 @@ public class BasicCrawlController {
         // For each crawl, you need to add some seed urls. These are the first
         // URLs that are fetched and then the crawler starts following links
         // which are found in these pages
-        controller.addSeed("https://www.flipkart.com");
+        controller.addSeed("https://www.amazon.in/");
 //        controller.addSeed("https://nmap.org/download");
 //        controller.addSeed("https://www.ics.uci.edu/~welling/");
 
@@ -71,7 +71,7 @@ public class BasicCrawlController {
         int numberOfCrawlers = 10;
 
         // To demonstrate an example of how you can pass objects to crawlers, we use an AtomicInteger that crawlers
-        // increment whenever they see a url which points to an image.
+        // increment whenever they see an url which points to an image.
         AtomicInteger numSeenImages = new AtomicInteger();
 
         // The factory which creates instances of crawlers.

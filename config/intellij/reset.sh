@@ -11,4 +11,4 @@ cp config/intellij/gradle-template.xml .idea/gradle.xml
 ./gradlew cleanIdea
 ./gradlew idea
 
-rm crawler4j-parent.ipr crawler4j-parent.iml crawler4j-parent.iws
+rm crawler4j-app.ipr crawler4j-app.iml crawler4j-app.iws

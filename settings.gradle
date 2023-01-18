@@ -1,4 +1,4 @@
-rootProject.name = 'crawler4j-parent'
+rootProject.name = 'crawler4j-app'
 
 include ':crawler4j'
 include ':crawler4j-examples-base'
