@@ -19,7 +19,7 @@ public class MultipleCrawlerController {
     public static void main(String[] args) throws Exception {
         // The folder where intermediate crawl data is stored (e.g. list of urls that are extracted from previously
         // fetched pages and need to be crawled later).
-        String crawlStorageFolder = "/tmp/crawler4j/";
+        String crawlStorageFolder = "./tmp/crawler4j/";
 
         CrawlConfig config1 = new CrawlConfig();
         CrawlConfig config2 = new CrawlConfig();
