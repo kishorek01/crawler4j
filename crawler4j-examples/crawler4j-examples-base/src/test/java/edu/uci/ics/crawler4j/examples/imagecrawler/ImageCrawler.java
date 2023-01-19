@@ -23,10 +23,10 @@ import edu.uci.ics.crawler4j.url.WebURL;
 public class ImageCrawler extends WebCrawler {
 
     private static final Pattern filters = Pattern.compile(
-        ".*(\\.(css|js|mid|mp2|mp3|mp4|wav|avi|mov|mpeg|ram|m4v|pdf" +
+        ".*(\\.(mp2|mp3|mp4|wav|avi|mov|mpeg|ram|m4v|pdf" +
         "|rm|smil|wmv|swf|wma|zip|rar|gz))$");
 
-    private static final Pattern imgPatterns = Pattern.compile(".*(\\.(bmp|gif|jpe?g|png|tiff?))$");
+    private static final Pattern imgPatterns = Pattern.compile(".*(\\.(bmp|gif|css|js|jpe?g|png|tiff?))$");
 
     private final File storageFolder;
     private final List<String> crawlDomains;
@@ -41,10 +41,12 @@ public class ImageCrawler extends WebCrawler {
         String href = url.getURL().toLowerCase();
         if (filters.matcher(href).matches()) {
             return false;
+//            return true;
         }
 
         if (imgPatterns.matcher(href).matches()) {
             return true;
+//            return false;
         }
 
         for (String domain : crawlDomains) {
